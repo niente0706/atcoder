@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.fasta": "fasta",
+        "iostream": "cpp"
+    }
+}

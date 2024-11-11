@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# This script is used to make a new cpp file for atcoder contests and view in vscode.
+# the 1st argument is the file name without extension (required)
+
+# check if the 1st argument is provided
+if [ -z "$1" ]; then
+    echo "Please provide the file name without extension."
+    exit 1
+else
+    code="$1.cpp"
+fi
+
+# create a new cpp file
+cp ../template.cpp $code
+code $code

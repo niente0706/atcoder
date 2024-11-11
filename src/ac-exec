@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# This script is used to execute the atcoder code file in the terminal.
+# the 1st argument is the file name without extension (required) and the 2nd argument is the input text file (optional, default: ../input.txt)
+
+filename=$1
+input=${2:-'../input.txt'}
+if [[ -f ${filename}.cpp ]]; then
+    g++ ${filename}.cpp -o ${filename}.out
+    ./${filename}.out < $input
+elif [[ -f ${filename}.py ]]; then
+    python3 ${filename}.py < $input
+fi
